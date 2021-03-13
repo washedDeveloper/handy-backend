@@ -1,8 +1,8 @@
 import express from "express";
-import helloController from "../controllers/hello";
+import controllers from "../controllers/controllers";
 
 const router = express.Router();
 
-router.get("/hello", helloController);
+router.post("/createProject", controllers.createProject);
 
 export default router;
