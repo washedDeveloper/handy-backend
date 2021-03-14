@@ -8,6 +8,11 @@ dotenv.config();
 connectToMongo();
 
 app.use(express.json());
+app.get("/", (_, res: express.Response) => {
+  return res.json({
+    hello: "world",
+  });
+});
 app.use("/api", api);
 
 app.listen(8080, () => {
