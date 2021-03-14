@@ -7,6 +7,7 @@ export interface IIssue {
   skill: string;
   language: string;
   link: string;
+  stars: number;
   dateOfEntry?: Date;
   lastUpdated?: Date;
 }

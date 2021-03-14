@@ -7,6 +7,7 @@ const IssueSchema = new Schema({
   skill: String,
   language: String,
   link: String,
+  stars: Number,
   dateOfEntry: {
     type: Date,
     default: new Date(),
