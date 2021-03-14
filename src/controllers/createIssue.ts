@@ -7,6 +7,7 @@ const createIssueController = async (
   res: express.Response
 ) => {
   const issue: IIssue = req.body;
+  issue.stars = 0;
   try {
     await IssueModel.create(issue);
   } catch (e) {
