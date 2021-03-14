@@ -8,8 +8,9 @@ export const getPopularController = async (
 ) => {
   const issues = await IssueModel.find({});
   const sorted = issues.sort(
-    (a: IIssueDocument, b: IIssueDocument) => a.stars - b.stars
+    (a: IIssueDocument, b: IIssueDocument) => b.stars - a.stars
   );
+  console.log(sorted);
   return res.json({
     top3: sorted.slice(0, 3),
   });
