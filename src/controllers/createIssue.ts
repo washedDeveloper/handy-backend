@@ -1,19 +1,22 @@
 import express from "express";
 import { IssueModel } from "../database/issue/isssue.model";
-
-interface createIssueBody {
-  projectName: string;
-  projectURL: string;
-  owner: string;
-}
+import { IIssue } from "../database/issue/issue.types";
 
 const createIssueController = async (
   req: express.Request,
   res: express.Response
 ) => {
-  const issue: createIssueBody = req.body;
-  await IssueModel.create(issue);
-  console.log("created issue");
+  const issue: IIssue = req.body;
+  try {
+    await IssueModel.create(issue);
+  } catch (e) {
+    return res.status(500).json({
+      success: false,
+    });
+  }
+  return res.json({
+    success: true,
+  });
 };
 
 export default createIssueController;

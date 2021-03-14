@@ -1,5 +1,4 @@
 import { Schema } from "mongoose";
-import { findByDifficultyLanguageSkill } from "./issue.statics";
 
 const IssueSchema = new Schema({
   name: String,
@@ -7,7 +6,7 @@ const IssueSchema = new Schema({
   difficulty: String,
   skill: String,
   language: String,
-  issueUrl: String,
+  link: String,
   dateOfEntry: {
     type: Date,
     default: new Date(),
@@ -17,10 +16,5 @@ const IssueSchema = new Schema({
     default: new Date(),
   },
 });
-
-IssueSchema.static(
-  "findByDifficultyLanguageSkill",
-  findByDifficultyLanguageSkill as any
-);
 
 export default IssueSchema;
