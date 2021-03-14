@@ -15,6 +15,6 @@ app.get("/", (_, res: express.Response) => {
 });
 app.use("/api", api);
 
-app.listen(8080, () => {
+app.listen(process.env.PORT, () => {
   console.log(`listening on port ${process.env.PORT}`);
 });
