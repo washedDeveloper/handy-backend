@@ -3,6 +3,6 @@ import controllers from "../controllers/controllers";
 
 const router = express.Router();
 
-router.post("/createProject", controllers.createProject);
+router.post("/createIssue", controllers.createIssue);
 
 export default router;

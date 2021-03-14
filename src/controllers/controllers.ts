@@ -1,5 +1,5 @@
-import createProjectController from "./createProject";
+import createIssue from "./createIssue";
 
 export default {
-  createProject: createProjectController,
+  createIssue: createIssue,
 };

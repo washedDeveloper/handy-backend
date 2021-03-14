@@ -6,7 +6,6 @@ export const connectToMongo = () => {
   if (database) {
     return;
   }
-  console.log(process.env.MONGO_URI);
 
   connect(process.env.MONGO_URI as string, {
     useNewUrlParser: true,
