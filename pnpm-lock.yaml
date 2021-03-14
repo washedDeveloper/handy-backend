@@ -1,8 +1,10 @@
 dependencies:
+  cors: 2.8.5
   dotenv: 8.2.0
   express: 4.17.1
   mongoose: 5.12.0
 devDependencies:
+  '@types/cors': 2.8.10
   '@types/express': 4.17.11
   '@types/mongoose': 5.10.3
   '@types/node': 14.14.34
@@ -43,6 +45,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ePPA/JuI+X0vb+gSWlPKOY0NdNAie/rPUqX2GUPpbZwiKTkSPhjXWuee47E4MtE54QVzGCQMQkAL6JhV2E1+cQ==
+  /@types/cors/2.8.10:
+    dev: true
+    resolution:
+      integrity: sha512-C7srjHiVG3Ey1nR6d511dtDkCEjxuN9W1HWAEjGq8kpcwmNM6JJkpC0xvabM7BXTG2wDq8Eu33iH9aQKa7IvLQ==
   /@types/express-serve-static-core/4.17.18:
     dependencies:
       '@types/node': 14.14.34
@@ -353,6 +359,15 @@ packages:
     dev: false
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+  /cors/2.8.5:
+    dependencies:
+      object-assign: 4.1.1
+      vary: 1.1.2
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
   /create-require/1.1.1:
     dev: true
     resolution:
@@ -1032,6 +1047,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
+  /object-assign/4.1.1:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
   /on-finished/2.3.0:
     dependencies:
       ee-first: 1.1.1
@@ -1560,9 +1581,11 @@ packages:
     resolution:
       integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
 specifiers:
+  '@types/cors': ^2.8.10
   '@types/express': ^4.17.11
   '@types/mongoose': ^5.10.3
   '@types/node': ^14.14.34
+  cors: ^2.8.5
   dotenv: ^8.2.0
   express: ^4.17.1
   mongoose: ^5.12.0
